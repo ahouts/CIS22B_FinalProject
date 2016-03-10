@@ -109,19 +109,13 @@ void BookDatabase::addBook(Book book)
 }
 int BookDatabase::getPrice(int identifier)
 {
+	books[identifier].getRetailPrice();
 	return 0;
 }
-void BookDatabase::printBook(int identifier)
-{
 
-}
-void BookDatabase::printISBN(string isbn)
-{
-
-}
 void BookDatabase::removeBook(int isbn)
 {
-
+	//is it possbile to decrase the size of an array in c++?
 }
 int BookDatabase::searchIdentifier(int identifier)
 {
@@ -144,5 +138,17 @@ int BookDatabase::operator[](int i)
 
 int BookDatabase::sellBook(int identifier)
 {
-	return 0;
+	
+	int count = 0;
+	while (count < size)
+	{
+		if (books[count].getIdentifier() == identifier)
+		{
+			return books[count].getRetailPrice();
+			delete[count]books;
+			//is it possible to resize arrays in c++.. aren't they fixed?
+		}
+		count++;
+		
+	}
 }
