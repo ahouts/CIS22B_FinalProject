@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "BookDatabase.h"
 
+
 BookDatabase::BookDatabase()
 {
 	books = new Book[1024];
@@ -113,9 +114,25 @@ int BookDatabase::getPrice(int identifier)
 	return 0;
 }
 
-void BookDatabase::removeBook(int isbn)
+void BookDatabase::removeBook(int identifier)
 {
-	//is it possbile to decrase the size of an array in c++?
+	int count = 0;
+	bool foundBook = false;
+	while (count < size - 1)
+	{
+		if (foundBook)
+		{
+			books[count] = books[count++];
+		}
+		else if (books[count].getIdentifier() == identifier)
+		{
+			books[count] = books[count++];
+			foundBook = true;
+		}
+		count++;
+	}
+	size--;
+	writeFile();
 }
 int BookDatabase::searchIdentifier(int identifier)
 {
@@ -146,7 +163,7 @@ int BookDatabase::sellBook(int identifier)
 		{
 			return books[count].getRetailPrice();
 			delete[count]books;
-			//is it possible to resize arrays in c++.. aren't they fixed?
+			size - 1;
 		}
 		count++;
 		
