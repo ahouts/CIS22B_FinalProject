@@ -421,7 +421,7 @@ void BookDatabase::lookupBookMenu()
 				if (books[i].getRetailPrice() == retailprice)
 				{
 					cout << books[i].getRetailPrice(); 
-					found = true;
+					retailfound = true;
 				}
 			}
 			if (!retailfound)
