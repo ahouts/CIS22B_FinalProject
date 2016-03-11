@@ -197,7 +197,7 @@ void BookDatabase::mainMenu()
 	bool done = false;
 	while (!done)
 	{
-		cout << "\t\tSerendipity Booksellers\n\t\t\tInventory Database\n\n";
+		cout << "\t\tSerendipity Booksellers\n\t\t\tDatabase Main Menu\n\n";
 		cout << "\t    1. Look Up a Book\n";
 		cout << "\t    2. Add a Book\n";
 		cout << "\t    3. Edit a Books Record\n";
@@ -271,4 +271,49 @@ void BookDatabase::removeBookMenu()
 
 	removeBook(identifier);
 
+}
+
+void BookDatabase::lookupBookMenu()
+{
+	system("CLS");
+	bool done = false;
+	while (!done)
+	{
+		cout << "\t\tSerendipity Booksellers\n\t\t\tBook Lookup\n\n";
+		cout << "\t    1. Look Up by Identifier\n";
+		cout << "\t    2. Look Up by Title\n";
+		cout << "\t    3. Look Up by Author\n";
+		cout << "\t    4. Look Up by ISBN\n";
+		cout << "\t    5. Look Up by Publisher\n";
+		cout << "\t    6. Look Up by Date Added\n";
+		cout << "\t    7. Look Up by Retail Cost\n";
+		cout << "\t    8. Look Up by Wholesale Cost\n";
+		cout << "\t    9. Exit\n";
+		cout << "\n\t     Enter your choice: ";
+		int response;
+		cin >> response;
+		switch (response)
+		{
+		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		case 6:
+			break;
+		case 7:
+			break;
+		case 8:
+			break;
+		case 9:
+			break;
+		default:
+			break;
+		}
+	}
 }
