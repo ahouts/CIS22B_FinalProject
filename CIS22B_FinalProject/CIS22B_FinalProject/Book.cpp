@@ -117,6 +117,18 @@ void Book::setWholesaleCost(double wholesaleCos)
 	wholesaleCost = wholesaleCos;
 }
 
+void Book::operator=(Book & toCopy)
+{
+	title = toCopy.getTitle();
+	author = toCopy.getAuthor();
+	isbn = toCopy.getIsbn();
+	publisher = toCopy.getPublisher();
+	wholesaleCost = toCopy.getWholesaleCost();
+	retailPrice = toCopy.getRetailPrice();
+	dateAdded = toCopy.getDateAdded();
+	bookIdentifier = toCopy.getIdentifier();
+}
+
 ostream& operator<<(ostream& out, Book& book)
 {
 	out << fixed << setprecision(2);			// makes doubles round to two digits

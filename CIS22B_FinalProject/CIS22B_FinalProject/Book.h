@@ -68,6 +68,15 @@ public:
 	* @return returns out
 	*/
 	friend ostream& operator<<(ostream& out, Book& book);
+	/*
+	* replaces all parameters with the paramters of toCopy
+	* eg.
+	* assuming book1 is a book with all attributes set
+	* book2 = book1;
+	* book2 would now be identical to book1
+	* @param toCopy a book to copy
+	*/
+	void operator=(Book& toCopy);
 };
 
 #endif
