@@ -117,10 +117,8 @@ void Cashier::checkout()
 	for (int i = 0; i < cartSize; i++)
 	{
 		Book* book = database->searchIdentifier(cart[i]);
-		cout << book->getIsbn() << "\t" << book->getTitle() << "\t" << book->getRetailPrice();
+		cout << "    " << book->getIsbn() << "\t\t" << book->getTitle() << "\t\t" << book->getRetailPrice() << endl;
 	}
-	cout << "   069-01337-6969  Living like a God: Travis Pham    $69.99" << endl;
-	
 	cout << "\t\t\t\t\t____________________" << endl << endl;
 	cout << "\t\t\t\t\tSubtotal: " << subtotal << endl << "\t\t\t\t\tTax: " << "Sales Tax @ 6.25%: " << (subtotal * 0.0625) << endl << "\t\t\t\t\tTotal: " << subtotal + subtotal*0.0625 << endl;
 	cout << endl << "Thank You for Shopping at Serendipity!" << endl;
