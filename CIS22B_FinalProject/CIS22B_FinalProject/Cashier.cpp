@@ -100,7 +100,6 @@ void Cashier::addBookMenu()
 			cin.ignore(1000, '\n');
 		}
 	}
-	database->removeBook(identifier);
 }
 //function to remove book based on identifier, to be used in 'removeBookMenu'
 void Cashier::removeBookFromCart(int identifier)
